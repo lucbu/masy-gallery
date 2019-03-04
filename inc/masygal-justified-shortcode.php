@@ -28,7 +28,7 @@ function masygal_justified_shortcode_handler($atts) {
     	}
     </style>
 
-    <div id="masygal-justified-gallery-<?=$atts['id']?>">
+    <div id="masygal-justified-gallery-<?=$atts['id']?>" class="masygal-justified-gallery">
     	<?php
 if (!empty($images)) {
 		foreach ($images as $image) {

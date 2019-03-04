@@ -30,7 +30,7 @@ function masygal_masonry_shortcode_handler($atts) {
     	}
     </style>
 
-    <div id="masygal-masonry-gallery-<?=$atts['id']?>">
+    <div id="masygal-masonry-gallery-<?=$atts['id']?>" class="masygal-masonry-gallery">
     	<?php
 if (!empty($images)) {
 		foreach ($images as $image) {
