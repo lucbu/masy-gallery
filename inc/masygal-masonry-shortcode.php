@@ -43,7 +43,14 @@ if (!empty($images)) {
 				data-fancybox="gallery" href="<?=esc_url(wp_get_attachment_url($image));?>"
 			<?php }?>
 			>
-				<img src="<?=esc_url(wp_get_attachment_url($image));?>">
+				<img src="<?=esc_url(wp_get_attachment_url($image));?>"
+					<?php if (($image_alt = get_post_meta($image, '_wp_attachment_image_alt', true)) != ""){?>
+						alt="<?php echo $image_alt ?>"
+					<?php } ?>
+					<?php if (($image_title = wp_prepare_attachment_for_js($image)['title']) != ""){?>
+							title="<?php echo $image_title ?>"
+					<?php } ?>
+				>
 			</a>
 			<?php
 }
